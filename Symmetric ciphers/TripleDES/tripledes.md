@@ -57,6 +57,8 @@ Các weak key(8 bytes) có thể kể đến là:
 Lần 1: $ciphertext = E_{K3}(D_{K2}(E_{K1}(flag \oplus IV))) \oplus IV$
 
 Lần 2: $E_{K1}(D_{K2}(E_{K3}(ciphertext \oplus IV))) = E_{K1}(D_{K2}(E_{K3}(E_{K3}(D_{K2}(E_{K1}(flag \oplus IV))) \oplus IV \oplus IV))) \oplus IV$  
-Vì tất cả đều là weak key nên D(D(ct)) hay E(E(ct)) cũng đều ra pt
-Từ đó, lần 2 ta sẽ tính ra được flag
-
+Vì tất cả đều là weak key nên 
+- $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$
+- $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$
+- $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$
+Từ đó flag sẽ là kết quả ta thu được sau lần 2.
