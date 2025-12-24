@@ -62,11 +62,11 @@ Theo sơ đồ giải mã CBC, ta thấy:
 - $D(CT1) \oplus IV = PT1$ (ở đây IV theo như code cũng chính là KEY) => $D(CT1) \oplus KEY = PT1$
 
 Ý tưởng: Bước 1, sử dụng khối block gồm 16 bytes đầu (CT1-1) toàn là 0 cho vào request decrypt:
-=> $CT1-1 \oplus D(CT2-1) = PT2-1 = D(CT2-1)$
+=> $CT1|1 \oplus D(CT2|1) = PT2|1 = D(CT2|1)$
 
-Bước 2, sử dụng CT2-1 làm CT1-2 cho lần decrypt tiếp theo, ta được:
-- $D(CT2-1) \oplus KEY = PT2-1 \oplus KEY = PT1-2$
+Bước 2, sử dụng CT2|1 làm CT1|2 cho lần decrypt tiếp theo, ta được:
+- $D(CT2|1) \oplus KEY = PT2|1 \oplus KEY = PT1|2$
 
-Bước 3, tính $KEY = PT2-1 \oplus PT1-2$ ròi lấy plaintext của FLAG
+Bước 3, tính $KEY = PT2|1 \oplus PT1|2$ ròi lấy plaintext của FLAG
 
-Ghi chú: CTx-y(CT block thứ x ở bước thứ y)
+Ghi chú: CTx|y(CT block thứ x ở bước thứ y)
