@@ -53,12 +53,14 @@ Các weak key(8 bytes) có thể kể đến là:
 - E0E0E0E0F1F1F1F1
 - 1F1F1F1F0E0E0E0E
 
-Ý tưởng: Ta sẽ sử dụng 3DES 2 lần với KEY lần đầu là K1K2K3 với flag, KEY lần sau là K3K2K1 với ciphertext của lần trước, ta sẽ được:\\
+Ý tưởng: Ta sẽ sử dụng 3DES 2 lần với KEY lần đầu là K1K2K3 với flag, KEY lần sau là K3K2K1 với ciphertext của lần trước, ta sẽ được:
+
 Lần 1: $ciphertext = E_{K3}(D_{K2}(E_{K1}(flag \oplus IV))) \oplus IV$
 
 Lần 2: $E_{K1}(D_{K2}(E_{K3}(ciphertext \oplus IV))) = E_{K1}(D_{K2}(E_{K3}(E_{K3}(D_{K2}(E_{K1}(flag \oplus IV))) \oplus IV \oplus IV))) \oplus IV$  
 Vì tất cả đều là weak key nên 
 - $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$
 - $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$
-- $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$ \\
+- $D_{K1}(D_{K1}(ct)) = E_{K1}(E_{K1}(ct)) = pt$ 
+
 Từ đó flag sẽ là kết quả ta thu được sau lần 2.
