@@ -65,4 +65,5 @@ while True:
 ```
 
 Lưu ý: Ta tìm được đoạn đầu là 'crypto{CRIM' sau đó bị kẹt do cách zlib nén, nhưng ta có thể dễ dàng đoán được ký tự tiếp theo là E để tiếp tục dò ký tự.
+
 ![ERROR](error.PNG)
