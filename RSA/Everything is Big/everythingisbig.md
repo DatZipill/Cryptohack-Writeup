@@ -41,7 +41,7 @@ c = 0x3f984ff5244f1836ed69361f29905ca1ae6b3dcf249133c398d7762f5e2779191746942939
 ## Cách giải
 Tuy N, e là một giá trị rất lớn 2048 bits nhưng giá trị của private key d lại rất nhỏ so với N (chỉ 256 bits). Chính vì vậy, ta có thể sử dụng tấn công Wiener. Cách tấn công như sau:
 
-Vì $$e*d \equiv 1(mod\ phi) \Leftrightarrow e*d - k*phi = 1$$
+Vì $e*d \equiv 1(mod\ phi) \Leftrightarrow e*d - k*phi = 1$
 
 Lại có N là số rất lớn nên phi ~ N, ta lấy cả 2 vế chia cho phi, ta được:
 
