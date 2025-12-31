@@ -45,13 +45,13 @@ Vì $e*d \equiv 1(mod\ phi) \Leftrightarrow e*d - k*phi = 1$
 
 Lại có N là số rất lớn nên phi ~ N, ta lấy cả 2 vế chia cho phi, ta được:
 
-$\frac{e*d}{N} - k = \frac{1}{N} \Leftrightarrow \frac{e*d}{N} - k = 0 \Leftrightarrow \frac{e}{N} = \frac{k}{d}$ 
+$$\frac{e*d}{N} - k = \frac{1}{N} \Leftrightarrow \frac{e*d}{N} - k = 0 \Leftrightarrow \frac{e}{N} = \frac{k}{d}$$
 
 Tới đây ta có thể dùng liên phân số để tìm k và d. Sau khi có k và d, ta sẽ tính được $phi = \frac{e*d-1}{k}$. Ta sẽ dùng cách sau đây để xác định xem cặp k và d có thỏa mãn hay không:
 
-$phi = (p-1)*(q-1) \Leftrightarrow phi = p*q-p-q+1$
+$$phi = (p-1)*(q-1) \Leftrightarrow phi = p*q-p-q+1$$
 
-$\Leftrightarrow phi=N-p-q+1 \Leftrightarrow p+q=N-phi+1$
+$$\Leftrightarrow phi=N-p-q+1 \Leftrightarrow p+q=N-phi+1$$
 
 Cùng với N=p*q ta sẽ lập được pt bậc 2 theo định lý Viet đảo để tìm p và q. Nếu phương trình có 2 nghiệm thì k và d sẽ thỏa mãn, từ đó ta tìm được flag.
 
