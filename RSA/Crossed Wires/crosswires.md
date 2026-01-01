@@ -44,10 +44,14 @@ Ta có thể phân tích thừa số nguyên tố p, q từ N, e, d với thuậ
 Sau đây tôi sẽ chứng minh qua thuật toán này, ta có:
 
 $$e*d \equiv 1 (mod\ phi)$$
+
 $$\Leftrightarrow e*d-1=k$$
-với $k = phi*r$ và đồng thời k là một số chẵn. Chính vì vậy,
+
+với $ k = phi*r $ và đồng thời k là một số chẵn. Chính vì vậy,
+
 $$g^{e*d-1} \equiv 1(mod\ N)\ vì\ (g^{phi})^{r} \equiv 1(mod\ N)$$
-Theo định lý thặng dư Trung Hoa, nghiệm của $x^{2} \equiv 1(mod\ N)$ có tổng cộng 4 nghiệm:
+
+Theo định lý thặng dư Trung Hoa, nghiệm của $ x^{2} \equiv 1(mod\ N) $ có tổng cộng 4 nghiệm:
 
 1. $x \equiv 1(mod\ N)$ (nghiệm tầm thường)
 2. $x \equiv -1(mod\ N)$ (nghiệm tầm thường)
