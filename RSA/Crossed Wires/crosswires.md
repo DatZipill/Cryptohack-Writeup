@@ -66,7 +66,7 @@ Từ đó ta dễ dàng tính được q.
 
 Trở lại bài toán, sau khi tìm được p và q. Đồng thời có 
 
-$$((((m^{e1})^{e2})^{e3})^{e4})^{e5} \equiv m^{e1*e2*e3*e4*e5} \equiv e_flag (mod\ N)$$
+$$((((m^{e1})^{e2})^{e3})^{e4})^{e5} \equiv m^{e1*e2*e3*e4*e5} \equiv e\_flag \pmod N$$
 
 Ta có thể dễ dàng tính được flag. Đoạn code giải bài này:
 ```python
