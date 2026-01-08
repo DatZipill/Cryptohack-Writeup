@@ -53,10 +53,10 @@ $$g^{e*d-1} \equiv 1(mod\ N)\ vì\ (g^{phi})^{r} \equiv 1 \pmod N$$
 
 Theo định lý thặng dư Trung Hoa, nghiệm của $x^{2} \equiv 1 \pmod N$ có tổng cộng 4 nghiệm:
 
-1. $x \equiv 1(mod\ N)$ (nghiệm tầm thường)
-2. $x \equiv -1(mod\ N)$ (nghiệm tầm thường)
-3. $x \equiv 1(mod\ p)\ và\ x \equiv -1(mod\ q)$ (nghiệm không tầm thường)
-4. $x \equiv -1(mod\ p)\ và\ x \equiv 1(mod\ q)$ (nghiệm không tầm thường)
+1. $x \equiv 1(mod\ N)$ 
+2. $x \equiv -1(mod\ N)$ 
+3. $x \equiv 1(mod\ p)\ và\ x \equiv -1(mod\ q)$ 
+4. $x \equiv -1(mod\ p)\ và\ x \equiv 1(mod\ q)$ 
 
 Vì vậy, nếu ta chọn một số g bất kì rồi kính lần lượt $x = g^{k/2}, g^{k/4},... mod\ N$ thì ta có xác suất tìm được một x tại đó không làm cho mod N ra 1 hay -1 và chính là nghiệm không tầm thường. Từ đó, x-1 sẽ trở thành bội số của p 
 
