@@ -112,6 +112,8 @@ Vì vậy, ta tính được k' sẽ khoảng 128 bits, cùng với p là 256 bi
 ```bash
 M' = 2373273553037774377596381010280540868262890
 ```
+Note: Ta hoàn toàn có thể sử dụng M' khác cũng tầm đó bits, cái giá phải trả là thời gian.
+
 Giờ ta sẽ tìm hiểu cách dùng hàm small_roots(). Hàm small_roots thực hiện trên một hàm số đã đưa hệ số $x^{d}$ về 1. Hàm này nhận vào 3 tham số:
 1. X là X_bound, X_bound càng sát k, tốc độ thực hiện càng nhanh
 2. beta với $p > N^{beta}$
